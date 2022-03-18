@@ -9,7 +9,7 @@ class MovieCard {
 
         const movieCard = `
             <div class="movie-thumbnail center">
-                <img alt="${this._movie._title.en}" src=".${this._movie.picture}" />
+                <img alt="${this._movie.title}" src=".${this._movie.picture}" />
             </div>
             <h3 class="fs-16 center">${this._movie.title}</h3>
             <p class="fs-14 center">
