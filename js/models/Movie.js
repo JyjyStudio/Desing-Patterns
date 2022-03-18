@@ -1,3 +1,4 @@
+//constructor pattern
 class Movie {
 	constructor(data) {
 		this._picture = data.picture;
