@@ -49,11 +49,12 @@ body {
     width: 120px;
     object-fit: cover;
     box-shadow: 4px 5px 5px #333;
+    cursor: pointer;
 }
 
 /* Modal */
 .modal-on {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
