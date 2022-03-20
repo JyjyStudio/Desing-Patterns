@@ -14,6 +14,9 @@ class FactoryMovie {
 			case "externalApi":
 				return new ExternalMovie(data);
 
+			case "tv-show":
+				return new TvShow(data);
+
 			// Une bonne pratique est de déclencher une erreur si le format n'est pas reconnu
 			default:
 				throw "Unknown API type format";
