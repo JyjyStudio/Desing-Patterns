@@ -1,7 +1,7 @@
 //constructor pattern
 class Movie {
 	constructor(data) {
-		console.log(data);
+		// console.log(data);
 		this._picture = data.picture;
 		this._title = data.title;
 		this._released_in = data.released_in;
