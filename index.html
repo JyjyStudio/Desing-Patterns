@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" /> 
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Filmo Patterns - Un projet OpenClassrooms sur les design patterns</title>
-</head>
-<body>
-    <header class="main-header">
-        <h1>Filmo Patterns</h1>
-        <p>Des films et des design patterns</p>
-    </header>
-    <main class="movies-wrapper"></main>
-    <div class="modal"></div>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Factories  -->
-    <script src="factories/FactoryMovie.js"></script>
-    <script src="factories/FactoryCard.js"></script>
-    
-    <!-- Models -->
-    <script src="js/models/OldMovie.js"></script>
-    <script src="js/models/Movie.js"></script>
-    <script src="js/models/ExternalMovie.js"></script>
-    <script src="js/models/tvShow.js"></script>
+        <title>Filmo Patterns - Un projet OpenClassrooms sur les design patterns</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1>Filmo Patterns</h1>
+            <p>Des films et des design patterns</p>
+        </header>
+        <div class="filter-form-wrapper"></div>
+        <main class="movies-wrapper"></main>
+        <div class="modal"></div>
 
-     <!-- Singleton -->
-     <script src="js/database/User.js"></script>
+        <!-- Lib -->
+        <script src="js/lib/filter-v1/index.js"></script>
+        <script src="js/lib/filter-v2/index.js"></script>
 
-    <!-- Templates -->
-    <script src="js/templates/MovieCard.js"></script>
-    <script src="js/templates/tvShowCard.js"></script>
-    <script src="js/templates/Modal.js"></script>
 
-    <!-- Api -->
-    <script src="js/api/Api.js"></script>
+        <!-- Factories  -->
+        <script src="js/factories/FactoryMovie.js"></script>
+        <script src="js/factories/FactoryCard.js"></script>
 
-    <!-- Entry point -->
-    <script src="js/App.js"></script>
-</body>
+        <!-- Models -->
+        <script src="js/models/OldMovie.js"></script>
+        <script src="js/models/Movie.js"></script>
+        <script src="js/models/ExternalMovie.js"></script>
+        <script src="js/models/tvShow.js"></script>
+
+        <!-- Singleton -->
+        <script src="js/database/User.js"></script>
+        
+        <!-- Adapters -->
+        <script src="js/adapters/FilterMoviesAdapter.js"></script>
+
+        <!-- Templates -->
+        <script src="js/templates/MovieCard.js"></script>
+        <script src="js/templates/tvShowCard.js"></script>
+        <script src="js/templates/Modal.js"></script>
+        <script src="js/templates/FilterForm.js"></script>
+
+        <!-- Api -->
+        <script src="js/api/Api.js"></script>
+
+        <!-- Entry point -->
+        <script src="js/App.js"></script>
+    </body>
 </html>
