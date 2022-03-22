@@ -1,7 +1,7 @@
 //constructor pattern
 class Movie {
 	constructor(data) {
-		// console.log(data);
+		this._actor = "arnold";
 		this._picture = data.picture;
 		this._title = data.title;
 		this._released_in = data.released_in;
@@ -9,6 +9,9 @@ class Movie {
 		this._synopsis = data.synopsis;
 	}
 
+	get actor() {
+        return this._actor;
+    }
 	get picture() {
 		return `/assets/${this._picture}`;
 	}

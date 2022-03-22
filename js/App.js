@@ -29,14 +29,25 @@ class App {
 			(movie) => new FactoryMovie("tv-show", movie)
 		);
 
-		const allMovies = newMovies.concat(externalMovies).concat(tvShow);
-
-		allMovies.forEach((movie) => {
-			console.log(movie);
-			const Template = new FactoryCard(movie.type, movie);
-			console.log(Template);
+		const allMovies = newMovies.concat(externalMovies);
+		const allTvShows = tvShow;
+		const allMedias = allMovies.concat(tvShow)
+		
+		allMovies.forEach(movie => {
+			const Template = new FactoryCard("movie", movie);
 			this.$moviesWrapper.appendChild(Template.createCard());
 		});
+
+		allTvShows.forEach(movie => {
+			// console.log(movie);
+			const Template = new FactoryCard("tv-show", movie);
+			// console.log(Template);
+			this.$moviesWrapper.appendChild(Template.createCard());
+		})
+
+		const Filter = new FilterForm(allMedias);
+        Filter.render();
+
 	}
 }
 
