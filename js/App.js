@@ -15,8 +15,8 @@ class App {
 		const externalMoviesData = await this.externalMoviesApi.getMovies();
 		const tvShowData = await this.tvShowApi.getMovies();
 
-		const ModalForm = new Form();
-		ModalForm.render();
+		const Form = new FormModal();
+        Form.render();
 
 		// const oldMovies = oldMoviesData.map(movie => new FactoryMovie("oldApi", movie));
 		const newMovies = newMoviesData.map(
@@ -34,13 +34,13 @@ class App {
 		const allMedias = allMovies.concat(tvShow)
 		
 		allMovies.forEach(movie => {
-			const Template = new FactoryCard("movie", movie);
+			const Template = cardWithPlayer(new FactoryCard("movie", movie));
 			this.$moviesWrapper.appendChild(Template.createCard());
 		});
 
-		allTvShows.forEach(movie => {
-			// console.log(movie);
-			const Template = new FactoryCard("tv-show", movie);
+		allTvShows.forEach(tvShow => {
+			// console.log(tvShow);
+			const Template = cardWithPlayer(new FactoryCard("tv-show", tvShow));
 			// console.log(Template);
 			this.$moviesWrapper.appendChild(Template.createCard());
 		})
