@@ -1,14 +1,14 @@
 class TvShowCard {
 	constructor(tvShow) {
 		this._tvShow = tvShow;
+        this.$wrapper = document.createElement('div');
+        this.$wrapper.classList.add('tvShow-card-wrapper');
 	}
 
 	createCard() {
-		const $wrapper = document.createElement("div");
-		$wrapper.classList.add("movie-card-wrapper");
 
-		const tvShow = `
-            <div class="movie-thumbnail center">
+		const tvShowCard = `
+            <div class="tvShow-thumbnail center">
                 <img
                     alt="${this._tvShow.title}"
                     src=".${this._tvShow.picture}"
@@ -24,7 +24,10 @@ class TvShowCard {
             </p>
         `;
 
-		$wrapper.innerHTML = tvShow;
-		return $wrapper;
+		this.$wrapper.innerHTML = tvShowCard;
+		return this.$wrapper;
 	}
+    get tvShow() {
+        return this._tvShow;
+    }
 }

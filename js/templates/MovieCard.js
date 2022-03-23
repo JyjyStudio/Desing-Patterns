@@ -1,11 +1,11 @@
 class MovieCard {
     constructor(movie) {
-        this._movie = movie
+        this._movie = movie;
+        this.$wrapper = document.createElement('div');
+        this.$wrapper.classList.add('movie-card-wrapper');
     }
 
     createCard() {
-        const $wrapper = document.createElement('div')
-        $wrapper.classList.add('movie-card-wrapper')
 
         const movieCard = `
             <div class="movie-thumbnail center">
@@ -17,9 +17,12 @@ class MovieCard {
                 -
                 <span>${this._movie.duration}</span>
             </p>
-        `
+        `;
         
-        $wrapper.innerHTML = movieCard
-        return $wrapper
+        this.$wrapper.innerHTML = movieCard;
+        return this.$wrapper;
+    }
+    get movie() {
+        return this._movie;
     }
 }
