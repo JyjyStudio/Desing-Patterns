@@ -43,7 +43,7 @@ body {
 
 
 /* Movie Card */
-.movie-thumbnail img {
+.movie-thumbnail img, .tvShow-thumbnail img {
     border-radius: 8px;
     height: 177px;
     width: 120px;
