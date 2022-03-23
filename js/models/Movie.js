@@ -7,6 +7,7 @@ class Movie {
 		this._released_in = data.released_in;
 		this._duration = data.duration;
 		this._synopsis = data.synopsis;
+		this._trailer = data.trailer_id;
 	}
 
 	get actor() {
@@ -34,4 +35,7 @@ class Movie {
 	get synopsis() {
 		return this._synopsis;
 	}
+	get trailer() {
+        return `https://www.youtube.com/embed/${this._trailer}`;
+    }
 }

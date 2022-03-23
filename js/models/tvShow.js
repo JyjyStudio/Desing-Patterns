@@ -8,6 +8,7 @@ class TvShow {
 		this._synopsis = data.synopsis;
 		this._type = data.type;
 		this._numberOfSeasons = data.numberOfSeasons;
+		this._trailer = data.trailer_id;
 	}
 
 	get picture() {
@@ -34,4 +35,7 @@ class TvShow {
 	get numberOfSeasons() {
 		return this._numberOfSeasons;
 	}
+	get trailer() {
+        return `https://www.youtube.com/embed/${this._trailer}`;
+    }
 }
