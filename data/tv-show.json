@@ -7,7 +7,8 @@
             "durationPerEpisode": 59,
             "numberOfSeasons": 5,
             "released_in": 2002,
-            "type": "tv-show"
+            "type": "tv-show",
+            "trailer_id": "LdZKjNMrZDQ"
         },
         {
             "title": "La Maison des bois",
@@ -16,7 +17,8 @@
             "durationPerEpisode": 50,
             "numberOfSeasons": 1,
             "released_in": 1971,
-            "type": "tv-show"
+            "type": "tv-show",
+            "trailer_id": "lZMV-kj85Kc"
         },
         {
             "title": "Breaking Bad",
@@ -25,7 +27,8 @@
             "durationPerEpisode": 47,
             "numberOfSeasons": 5,
             "released_in": 2008,
-            "type": "tv-show"
+            "type": "tv-show",
+            "trailer_id": "CoWsuFdqeYE"
         }
     ]
 }
